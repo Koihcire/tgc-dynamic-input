@@ -1,6 +1,7 @@
 import React from "react"
 import {v4 as uuidv4} from "uuid"
 import DynamicForm from "./DynamicForm"
+import DynamicForm2 from "./DynamicForm2"
 
 export default function App() {
   const [inviteMembers, setInviteMembers] = React.useState([
@@ -68,6 +69,9 @@ export default function App() {
 
       <h1>Dynamic form clone</h1>
       <DynamicForm/>
+
+      <h1>Dynamid form clone 2</h1>
+      <DynamicForm2/>
     </React.Fragment>
   );
 }

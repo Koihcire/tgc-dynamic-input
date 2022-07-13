@@ -9,7 +9,8 @@ export default class DynamicForm extends React.Component {
                 email: "",
                 id: uuidv4()
             }
-        ]
+        ],
+        inviteMembersArray: []
     }
 
     addMemberRow = () => {
@@ -25,6 +26,14 @@ export default class DynamicForm extends React.Component {
         this.setState({
             inviteMembers: _inviteMembers
         })
+        // set inviteMembersArray
+        let _inviteMembersArray = [];
+        for (let m of this.state.inviteMembers){
+            _inviteMembersArray.push(m.name)
+        }
+        this.setState({
+            inviteMembersArray: _inviteMembersArray
+        })
     }
 
     removeMemberRow = (id) => {
@@ -36,6 +45,14 @@ export default class DynamicForm extends React.Component {
         this.setState({
             inviteMembers: _inviteMembers
         })
+        // set inviteMembersArray
+        let _inviteMembersArray = [];
+        for (let m of this.state.inviteMembers){
+            _inviteMembersArray.push(m.name)
+        }
+        this.setState({
+            inviteMembersArray: _inviteMembersArray
+        })
     }
 
     handleFormChange = (id, e) => {
@@ -46,6 +63,14 @@ export default class DynamicForm extends React.Component {
         // set state
         this.setState({
             inviteMembers: _inviteMembers
+        })
+        // set inviteMembersArray
+        let _inviteMembersArray = [];
+        for (let m of this.state.inviteMembers){
+            _inviteMembersArray.push(m.name)
+        }
+        this.setState({
+            inviteMembersArray: _inviteMembersArray
         })
     }
 
